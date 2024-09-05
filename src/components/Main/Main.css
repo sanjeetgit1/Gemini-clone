@@ -23,6 +23,7 @@
 .main-container{
     max-width: 900px;
     margin: auto;
+   
     
    
 }
@@ -32,6 +33,7 @@
     color: #c4c7c5;
     font-weight: 500;
     padding: 20px;
+ 
 }
 
 .main .greet span{
@@ -41,10 +43,13 @@
 }
 
 .main .cards{
-    display: flex;
+    display:flex;
     grid-template-columns: repeat(auto-fill, minmax(180px,1fr));
     gap: 15px;
    padding-bottom: 50px;
+
+ 
+ 
 }
 
 .main .card{
@@ -54,6 +59,7 @@
     border-radius: 10px;
     position: relative;
     cursor: pointer;
+    
 }
 
 .main .card img{
@@ -77,7 +83,7 @@
 
 
 .main-bottom{
-    /* position: absolute;   */
+    position: absolute;  
     bottom: 0;
     width: 100%;
     max-width: 900px;
@@ -93,11 +99,14 @@
     background-color: #f0f4f9;
     padding: 10px 20px;
     border-radius: 50px;
+    margin-bottom: 0px;
+
 }
 
 .search-box img{
     width: 25px;
     cursor: pointer;
+    margin-left: 1  vw;
 }
 
 .search-box input{
@@ -122,6 +131,112 @@
 }
 
 
+.result{
+    padding: 0px 5%;
+    max-height: 70vh;
+    overflow-y: scroll;
+    margin-bottom: 4vw;
+    
+
+
+}
+
+.result::-webkit-scrollbar{
+    display: none;
+    
+
+}
+
+.result-title{
+    margin: 40px 0px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.result img{
+    width: 40px;
+    border-radius: 50%;
+
+}
+.result-data{
+    display: flex;
+    align-items: start;
+    gap: 20px;
+}
+
+.loader{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.loader hr{
+    border-radius: 4px;
+    border: none;
+    background-color: #f6f7f9;
+    background: linear-gradient(to right , #c09eff,#ffffff, #c09eff);
+    background-size: 800px 50px;
+    height: 15px;
+    animation: loader 3s infinite linear;
+}
+@keyframes loader{
+    0%{
+        background-position: -800px 0px;
+    }100%{
+        background-position: 800px 0px;
+    }
+}
+
+.result-data p{
+    font-size: 17px;
+    font-weight: 300px;
+    line-height: 1.8;
+
+}
+
+
 @media (max-width:600px){
+    .main .greet{
+       
+        padding-left: 40px;
+       margin-bottom: -4vw;
+        /* padding: 0px; */
+        font-size: 10.5vw;
+        
+   
+    }
+    .main .cards{
+        display: inline-block;
+        padding: 40px;
+      
+        
+    }
+    .main .card{
+    margin-bottom: 5vw;
+    
+      
+        
+    }
+    .main .card:nth-child(4){
+    margin-bottom: 25vw;
+ 
+    }
+
+    .main-bottom input{
+        flex: none;
+        width: 150px;
+    }
+    .main-bottom img{
+        width: 20px;
+
+    }
+
+    .search-box{
+        padding: 5px 10px;
+    }
+    .search-box div{
+        gap: 5px;
+    }
     
 }
